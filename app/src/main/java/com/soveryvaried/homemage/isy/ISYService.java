@@ -87,7 +87,7 @@ public class ISYService extends IntentService {
 
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
-		String basicAuth = "Basic " + new String(Base64.encode("admin:temp".getBytes(), Base64.NO_WRAP));
+		String basicAuth = "Basic " + new String(Base64.encode("admin:temp2".getBytes(), Base64.NO_WRAP));
 		conn.setRequestProperty("Authorization", basicAuth);
 		conn.connect();
 		return conn;
