@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<pre-dex-items>
+
+    <item
+        dex="D:\Development\HomeMage\app\build\intermediates\pre-dexed\debug\classes-cf7e0c7f00ca619a269b025b58dfaf8d41fe7b19.jar"
+        jar="D:\Development\HomeMage\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\19.1.0\classes.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28"/>
+    <item
+        dex="D:\Development\HomeMage\app\build\intermediates\pre-dexed\debug\support-v4-19.1.0-72c98d6a32803f281507188797322f12517a3919.jar"
+        jar="C:\Program Files\android-studio\sdk\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67"/>
+
+</pre-dex-items>
