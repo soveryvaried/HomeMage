@@ -4,10 +4,12 @@ import android.app.Activity;
 import android.app.IntentService;
 import android.content.ContentValues;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Message;
 import android.os.Messenger;
 import android.os.RemoteException;
+import android.preference.PreferenceManager;
 import android.util.Base64;
 import android.util.Log;
 
@@ -85,9 +87,14 @@ public class ISYService extends IntentService {
 		String myURL = "http://soveryvaried.dnsalias.org/" + urlCommand;
 		URL url = new URL(myURL);
 
+        SharedPreferences sharedPref = PreferenceManager.getDefaultSharedPreferences(this);
+        String adminId = sharedPref.getString("admin_id", "admin");
+        String password = sharedPref.getString("admin_pwd", "admin");
+        String authenticateStr = adminId+":"+password;
+
 		HttpURLConnection conn = (HttpURLConnection) url.openConnection();
 		conn.setRequestMethod("GET");
-		String basicAuth = "Basic " + new String(Base64.encode("admin:temp2".getBytes(), Base64.NO_WRAP));
+		String basicAuth = "Basic " + new String(Base64.encode(authenticateStr.getBytes(), Base64.NO_WRAP));
 		conn.setRequestProperty("Authorization", basicAuth);
 		conn.connect();
 		return conn;

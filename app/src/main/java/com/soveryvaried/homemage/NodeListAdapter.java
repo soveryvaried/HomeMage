@@ -14,9 +14,12 @@ import com.soveryvaried.homemage.db.HomeMageDatabase;
 
 public class NodeListAdapter extends CursorAdapter {
 	private static final String DEBUG_TAG = "NodeListAdapter";
+    private NodeListFragment host;
 
-	public NodeListAdapter(Context context, Cursor c) {
-		super(context, c);
+	public NodeListAdapter(Context context, Cursor c, NodeListFragment fragment) {
+
+        super(context, c);
+        host = fragment;
 	}
 
 	@Override
@@ -26,9 +29,9 @@ public class NodeListAdapter extends CursorAdapter {
 		final String address = cursor.getString(cursor.getColumnIndex(HomeMageDatabase.COL_ADDRESS));
 		
 		nodeView.setOnClickListener(new OnClickListener() {
-			public void onClick(View v) {		
-				MainActivity host = (MainActivity) v.getContext();
-				host.showNodeDetail(address, name, status);			
+			public void onClick(View v) {
+                //NodeListFragment host = (NodeListFragment) v.getRootView();
+				host.showNodeDetail(address, name, status);
 			}			
 		});
 		TextView nameView = (TextView) nodeView.findViewById(R.id.nameTxt);
@@ -44,7 +47,7 @@ public class NodeListAdapter extends CursorAdapter {
 		}
 		button.setOnClickListener(new OnClickListener() {
 			public void onClick(View v) {
-					MainActivity host = (MainActivity) v.getContext();
+					//MainActivity host = (MainActivity) v.getContext();
 					host.toggleNode(address, ((ToggleButton) v).isChecked());
 			}
 		});

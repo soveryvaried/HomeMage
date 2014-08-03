@@ -25,6 +25,7 @@
         </activity>
         <service android:name="com.soveryvaried.homemage.isy.ISYService"></service>
         <activity android:name="com.soveryvaried.homemage.NodeDetailActivity"></activity>
+        <activity android:name="com.soveryvaried.homemage.SettingsActivity"></activity>
         <provider android:name="com.soveryvaried.homemage.db.HomeMageProvider" android:authorities="com.soveryvaried.homemage.db.HomeMageProvider" android:exported="false"></provider>
     </application>
 

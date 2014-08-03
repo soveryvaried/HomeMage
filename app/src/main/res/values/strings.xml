@@ -7,5 +7,12 @@
     <string name="retrieveBtn">retrieveBtn</string>
     <string name="resultTxtVw">resultTxtVw</string>
     <string name="retrieveBtnTxt">Retrieve</string>
+    <string name="action_settings">Settings</string>
+    <string name="pref_admin_label">ISY Admin Id</string>
+    <string name="pref_admin_key">admin_id</string>
+    <string name="pref_admin_default">admin</string>
+    <string name="pref_pwd_label">ISY Admin Password</string>
+    <string name="pref_pwd_key">admin_pwd</string>
+    <string name="pref_pwd_default">admin</string>
 
 </resources>

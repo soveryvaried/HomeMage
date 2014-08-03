@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditTextPreference
+        android:title="@string/pref_admin_label"
+        android:key="@string/pref_admin_key"
+        android:defaultValue="@string/pref_admin_default"
+        android:inputType="text"
+        android:singleLine="true" />
+    <EditTextPreference
+        android:title="@string/pref_pwd_label"
+        android:key="@string/pref_pwd_key"
+        android:defaultValue="@string/pref_pwd_default"
+        android:inputType="textPassword"
+        android:summary="Password for Admin user on ISY"
+        android:singleLine="true" />
+
+</PreferenceScreen>

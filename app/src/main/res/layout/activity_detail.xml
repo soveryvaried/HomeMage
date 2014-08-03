@@ -1,71 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent" >
 
-    <TextView
-        android:id="@+id/nameTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:text="Large Text"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
-
-    <TextView
-        android:id="@+id/addrTxt"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/nameTxt"
-        android:layout_centerHorizontal="true"
-        android:text="Medium Text"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="Medium Text"
-        android:id="@+id/groupTxt"
-        android:layout_below="@+id/addrTxt"
-        android:layout_centerHorizontal="true" />
-
-    <SeekBar
-        android:id="@+id/dimBar"
+    <fragment android:name="com.soveryvaried.homemage.NodeDetailFragment"
+        android:id="@+id/node_detail_fragment"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/addrTxt"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="66dp"
-        android:contentDescription="&quot;Dim Level&quot;"
-        android:max="255" />
-
-    <ToggleButton
-        android:id="@+id/onOffButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
-        android:text="ToggleButton" />
-
-    <Button
-        android:id="@+id/fastOnButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/addrTxt"
-        android:layout_alignTop="@+id/onOffButton"
-        android:text="Fast On" />
-
-    <Button
-        android:id="@+id/fastOffButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@id/fastOnButton"
-        android:layout_alignParentLeft="false"
-        android:layout_alignParentTop="false"
-        android:layout_below="@id/fastOnButton"
-        android:text="Fast Off" />
+        android:layout_height="match_parent"
+        tools:layout="@layout/fragment_detail" />
 
 </RelativeLayout>
